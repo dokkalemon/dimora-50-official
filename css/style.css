@@ -18,6 +18,7 @@
 
 body {
   background-color: var(--back);
+  color: white;
 }
 
 .full-width {
@@ -43,6 +44,35 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-title);
+}
+
+p,
+button,
+label {
+  font-family: var(--font-text);
+  font-size: 16px;
+}
+
+.btn {
+  padding: 12px 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 /* Header */
 header {
   position: fixed;
@@ -71,6 +101,10 @@ header {
 .logo img {
   height: 50%;
   filter: brightness(100);
+}
+
+.logo img:hover {
+  filter: none;
 }
 
 .navbar {
@@ -175,11 +209,12 @@ li:last-child {
 
 .carousel-arrow {
   height: 100%;
-  width: 5%;
+  width: 10%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9;
 }
 
 .carousel-arrow-left {
@@ -199,6 +234,7 @@ li:last-child {
   justify-content: center;
   cursor: pointer;
   transition: all 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .arrow-container i {
@@ -218,6 +254,7 @@ li:last-child {
   bottom: 0;
   display: flex;
   justify-content: center;
+  z-index: 9;
 }
 
 .controls {
@@ -248,6 +285,7 @@ li:last-child {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 9;
 }
 
 .quick-contact .line {
@@ -278,10 +316,96 @@ li:last-child {
   color: white;
   cursor: pointer;
   transition: all 0.5s ease;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  border-radius: 100%;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .quick-contact i:hover {
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.slide .image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.slide .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(0.5) grayscale(100000);
+  transition: all 2s ease;
+  left: 0;
+}
+
+.slide .image .philter {
+  height: 100%;
+  width: 100%;
+  background-color: var(--back-light);
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+  mix-blend-mode: darken;
+}
+
+.slide:hover .image img {
+  filter: brightness(0.7);
+  width: 101%;
+  left: -0.5%;
+}
+
+.slide .text {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide .text .text-container {
+  height: 100%;
+  padding: 50px;
+}
+
+.slide .text .text-container .text-content {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.slide .text .text-container .text-content h2 {
+  font-size: 80px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.slide .text .text-container .text-content p {
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 200;
+  padding-bottom: 20px;
 }
 
 /* PC */
