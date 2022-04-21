@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-  --back: #232323;
+  --back: #151515;
   --back-light: #111111;
   --primary-color: #23263a;
   --text-color: #ffffff;
@@ -96,7 +96,7 @@ label {
 }
 
 .title-section {
-  padding-top: 100px;
+  padding-top: 90px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@ label {
   font-size: 50px;
   white-space: nowrap;
   font-family: var(--font-text);
-  font-weight: 900;
+  font-weight: 100;
   line-height: 50px;
 }
 .title-section h3 {
@@ -260,6 +260,27 @@ li:last-child {
 .burger.active .burger-line-container .burger-line:last-child {
   transform: rotate(-135deg);
   top: -10px;
+}
+
+/* Copyright */
+.copyright {
+  background-color: var(--back-light);
+}
+
+.copyright-container p {
+  text-align: center;
+  padding: 7px;
+  font-size: 13px;
+  font-family: var(--font-button);
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+.copyright-container a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+.copyright-container a:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Carousel */
