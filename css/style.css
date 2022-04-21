@@ -18,6 +18,7 @@ html {
   --button-color-hover: #f1d186;
   --font-title: "Italiana", serif;
   --font-text: "Josefin Sans", sans-serif;
+  --font-button: "Roboto", sans-serif;
   --line-menu: #43371a;
 }
 
@@ -70,6 +71,7 @@ label {
   cursor: pointer;
   transition: all 0.5s ease;
   background-color: transparent;
+  font-family: var(--font-button);
 }
 
 .btn-primary {
@@ -97,28 +99,39 @@ label {
   padding-top: 100px;
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+.title-section .dot {
+  height: 3px;
+  width: 3px;
+  background-color: var(--button-color-hover);
+  border-radius: 10px;
+}
+
+.title-section .dot:first-child {
+  margin-bottom: 15px;
+}
+.title-section .dot:last-child {
+  width: 3px;
+  margin-top: 15px;
 }
 
 .title-section h2 {
   color: var(--button-color-hover);
-  font-size: 60px;
+  font-size: 50px;
+  white-space: nowrap;
+  font-family: var(--font-text);
+  font-weight: 900;
+  line-height: 50px;
+}
+.title-section h3 {
+  color: var(--button-color-hover);
+  font-size: 18px;
   white-space: nowrap;
   font-family: var(--font-text);
   font-weight: 100;
-}
-.title-section .line {
-  height: 1px;
-  background-color: var(--button-color-hover);
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.title-section .line:first-child {
-  width: 20%;
-}
-.title-section .line:last-child {
-  width: 100%;
 }
 
 /* Header */
