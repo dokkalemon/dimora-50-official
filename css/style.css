@@ -11,6 +11,7 @@
   --primary-color: #23263a;
   --text-color: #ffffff;
   --button-color: #d5a941;
+  --button-color-hover: #f1d186;
   --font-title: "Italiana", serif;
   --font-text: "Roboto", sans-serif;
   --line-menu: #43371a;
@@ -61,17 +62,31 @@ label {
 
 .btn {
   padding: 12px 50px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
   border: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
   cursor: pointer;
   transition: all 0.5s ease;
+  background-color: transparent;
 }
 
-.btn:hover {
+.btn-primary {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  color: black;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+.btn-secondary:hover {
+  background-color: var(--button-color-hover);
 }
 /* Header */
 header {
@@ -336,8 +351,13 @@ li:last-child {
   width: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0%;
   z-index: 0;
+  transition: all 1s ease;
+}
+
+.slide.active {
+  left: 100%;
 }
 
 .slide .image {
@@ -366,7 +386,7 @@ li:last-child {
   mix-blend-mode: darken;
 }
 
-.slide:hover .image img {
+.carousel:hover .slide .image img {
   filter: brightness(0.7);
   width: 101%;
   left: -0.5%;
@@ -406,6 +426,11 @@ li:last-child {
   color: white;
   font-weight: 200;
   padding-bottom: 20px;
+}
+
+/* about Us */
+.about-us {
+  height: 1000px;
 }
 
 /* PC */
