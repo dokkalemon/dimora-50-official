@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --back: #232323;
   --back-light: #111111;
@@ -13,7 +17,7 @@
   --button-color: #d5a941;
   --button-color-hover: #f1d186;
   --font-title: "Italiana", serif;
-  --font-text: "Roboto", sans-serif;
+  --font-text: "Josefin Sans", sans-serif;
   --line-menu: #43371a;
 }
 
@@ -88,6 +92,35 @@ label {
 .btn-secondary:hover {
   background-color: var(--button-color-hover);
 }
+
+.title-section {
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title-section h2 {
+  color: var(--button-color-hover);
+  font-size: 60px;
+  white-space: nowrap;
+  font-family: var(--font-text);
+  font-weight: 100;
+}
+.title-section .line {
+  height: 1px;
+  background-color: var(--button-color-hover);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title-section .line:first-child {
+  width: 20%;
+}
+.title-section .line:last-child {
+  width: 100%;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -426,6 +459,8 @@ li:last-child {
   color: white;
   font-weight: 200;
   padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 /* about Us */
