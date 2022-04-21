@@ -192,7 +192,7 @@ li:last-child {
 .arrow-container {
   height: 60px;
   width: 60px;
-  border-radius: 100%;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -209,6 +209,79 @@ li:last-child {
 .arrow-container:hover {
   transform: scale(1.1);
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.controls-container {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  height: 100%;
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control {
+  height: 5px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.control.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+.quick-contact {
+  height: 100vh;
+  width: 40px;
+  right: 15%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-contact .line {
+  width: 1px;
+  background-color: white;
+}
+
+.quick-contact .line:first-child {
+  height: 20%;
+  margin: 0px 0px 10px 0px;
+}
+.quick-contact .line:nth-child(3) {
+  height: 6%;
+  margin: 10px 0px 10px 0px;
+}
+.quick-contact .line:nth-child(5) {
+  height: 6%;
+  margin: 10px 0px 10px 0px;
+}
+
+.quick-contact .line:last-child {
+  height: 20%;
+  margin: 10px 0px 0px 0px;
+}
+
+.quick-contact i {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.quick-contact i:hover {
+  opacity: 0.5;
 }
 
 /* PC */
