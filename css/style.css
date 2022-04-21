@@ -167,6 +167,50 @@ li:last-child {
   top: -10px;
 }
 
+/* Carousel */
+.carousel {
+  height: 100vh;
+  position: relative;
+}
+
+.carousel-arrow {
+  height: 100%;
+  width: 5%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+.carousel-arrow-right {
+  right: 0;
+}
+
+.arrow-container {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.arrow-container i {
+  color: white;
+  font-size: 20px;
+}
+
+.arrow-container:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* PC */
 @media screen and (max-width: 1200px) {
   .container {
