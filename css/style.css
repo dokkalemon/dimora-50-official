@@ -500,7 +500,7 @@ li:last-child {
 
 /* about Us */
 .about-us {
-  height: 1000px;
+  padding-bottom: 80px;
 }
 
 .about-us-container p {
@@ -559,6 +559,61 @@ li:last-child {
   opacity: 0.2;
 }
 
+/* La Struttura */
+.house {
+  margin-top: 100px;
+  background-color: var(--back-light);
+}
+
+.house-container {
+  padding-top: 50px;
+}
+
+.house-item {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+.house-photo {
+  height: 100%;
+  width: 50%;
+}
+
+.house-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.house-info {
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.house-info-text {
+  height: 80%;
+  width: 130%;
+  position: absolute;
+  background-color: var(--back);
+  z-index: 99;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.photo-left .house-info .house-info-text {
+  left: 0;
+  border-right: 5px solid var(--button-color);
+}
+.photo-right .house-info .house-info-text {
+  right: 0;
+  border-left: 5px solid var(--button-color);
+}
 /* PC */
 @media screen and (max-width: 1200px) {
   .container {
