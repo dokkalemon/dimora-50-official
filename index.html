@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimora50 | Home Page</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +31,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Josefin+Sans:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
     <!-- Fontawesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous'/>
+
+    <!-- Date picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 <body>
 
@@ -32,13 +56,10 @@
                             <a href="#la-struttura">La Struttura</a>
                         </li>
                         <li>
-                            <a href="">Dove si Trova</a>
+                            <a href="#dove-si-trova">Dove si Trova</a>
                         </li>
                         <li>
-                            <a href="">La Nostra Città</a>
-                        </li>
-                        <li>
-                            <a href="">La Nostra Terra</a>
+                            <a href="">Scopri Le Marche</a>
                         </li>
                         <li>
                             <a href="">Contattaci</a>
@@ -187,10 +208,23 @@
         <div class="dot"></div>
     </div>
     <div class="house-container container px-20">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus minus facilis at, molestiae voluptas iusto illo eius adipisci consequuntur ea aliquid inventore modi quas deserunt saepe velit perferendis fugit in.</p>
         <div class="house-item photo-left">
             <div class="house-info">
                 <div class="house-info-text">
-                    <h1>L'appartamento</h1>
+                    <h3>L'appartamento</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos ea placeat quia a asperiores obcaecati quis consequuntur dolore, velit eum fugiat atque? Omnis libero, aspernatur earum aperiam voluptate tempore.</p>
+                    <h4>Caratteristiche</h4>
+                    <div class="details">
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-primary house-button"><i class="fa-solid fa-images"></i></button>
+                        <button class="btn btn-secondary">VERIFICA DISPONIBILITÀ</button>
+                    </div>
                 </div>
             </div>
             <div class="house-photo">
@@ -203,12 +237,38 @@
             </div>
             <div class="house-info">
                 <div class="house-info-text">
+                    <h3>Camera X</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos ea placeat quia a asperiores obcaecati quis consequuntur dolore, velit eum fugiat atque? Omnis libero, aspernatur earum aperiam voluptate tempore.</p>
+                    <h4>Caratteristiche</h4>
+                    <div class="details">
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-primary house-button"><i class="fa-solid fa-images"></i></button>
+                        <button class="btn btn-secondary">VERIFICA DISPONIBILITÀ</button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="house-item photo-left">
             <div class="house-info">
                 <div class="house-info-text">
+                    <h3>Camera Y</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos ea placeat quia a asperiores obcaecati quis consequuntur dolore, velit eum fugiat atque? Omnis libero, aspernatur earum aperiam voluptate tempore.</p>
+                    <h4>Caratteristiche</h4>
+                    <div class="details">
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-primary house-button"><i class="fa-solid fa-images"></i></button>
+                        <button class="btn btn-secondary">VERIFICA DISPONIBILITÀ</button>
+                    </div>
                 </div>
             </div>
             <div class="house-photo">
@@ -221,6 +281,19 @@
             </div>
             <div class="house-info">
                 <div class="house-info-text">
+                    <h3>Camera Z</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos ea placeat quia a asperiores obcaecati quis consequuntur dolore, velit eum fugiat atque? Omnis libero, aspernatur earum aperiam voluptate tempore.</p>
+                    <h4>Caratteristiche</h4>
+                    <div class="details">
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                        <p><i class="fa-solid fa-heart"></i> Camera Matrimoniale</p>
+                        <p><i class="fa-solid fa-wifi"></i> Wi fi</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-primary house-button"><i class="fa-solid fa-images"></i></button>
+                        <button class="btn btn-secondary">VERIFICA DISPONIBILITÀ</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,12 +302,119 @@
  </section>
 
 
-    <div class="copyright fullwidth">
-        <div class="copyright-container container px-20">
-            <p>Copyright © 2022 Dimora 50 | <a href="">Privacy Policy</a> - <a href="">Cookie Policy</a> | Made by <a href="https://www.robertodottori.it" target="_blank"><strong>Roberto Dottori</strong></a></p>
+ <!-- Dove si trova -->
+ <section class="map fullwidth" id="dove-si-trova">
+    <div class="title-section">
+        <div class="dot"></div>
+        <h2>Dove si trova</h2>
+        <h3>- DIMORA 50 -</h3>
+        <div class="dot"></div>
+    </div>
+
+    <div class="map-container container px-20">
+        <p>Dimora 50 si trova al centro di Porto Recanati.<bR>
+            nasce come un paesino di pescatori poi con il tempo è diventata una meta turistica.
+Gode di un ottimo turismo estivo, e anche una affluenza invernale nel weekend come punto di riferimenti per i paesi limitrofi.
+Paese consigliato perché comodo è ottimo per rilassarsi e riprendersi dalla frenesia della vita lavorativa.
+Il lungomare è pedonale comodo per le famiglie con bambini piccoli ed essendo pedonale si respira una atmosfera di tranquillità dando la possibilità di godersi il mare al 100%.
+Un corso molto lungo quasi l'intera lunghezza del paese con molte attività di diverso genere. A luglio ed Agosto è pedonale dalle 21 alle 12 di notte dando la possibilità di una passeggiata serale.
+        </p>
+        
+        <div class="map-image-legend">
+            <div class="map-image">
+                <img src="./img/mappa.jpeg.jpg" alt="">
+            </div>
+            <div class="map-labels">
+                <div class="map-label" id="colazioni">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="map-label" id="supermarket">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>
+            <div class="map-legend">
+                <h4>Seleziona una voce:</h4>
+                <div class="map-item">
+                    <input type="checkbox" id="breakfast" value="dimora-50" onchange="showLabel(this, colazioni)">
+                    <label for="breakfast">Colazioni</label>
+                </div>
+                <div class="map-item">
+                    <input type="checkbox" id="supermercato" value="dimora-50" onchange="showLabel(this, supermarket)">
+                    <label for="supermercato">Supermercato</label>
+                </div>
+                <div class="map-item">
+                    <input type="checkbox" id="stazione" value="dimora-50">
+                    <label for="stazione">Stazione</label>
+                </div>
+                <div class="map-item">
+                    <input type="checkbox" id="parcheggio" value="dimora-50">
+                    <label for="parcheggio">Parcheggio</label>
+                </div>
+                <div class="map-item">
+                    <input type="checkbox" id="farmacia" value="dimora-50">
+                    <label for="farmacia">Farmacia</label>
+                </div>
+            </div>
         </div>
 
+
     </div>
+ </section>
+
+ <!-- Contattaci -->
+ <section class="contact full-width">
+    <div class="title-section">
+        <div class="dot"></div>
+        <h2>Contattaci</h2>
+        <h3>- DIMORA 50 -</h3>
+        <div class="dot"></div>
+    </div>
+    
+    <div class="contact-container container px-20 ">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi in assumenda a. Maxime corrupti eius asperiores aut voluptas magni velit accusamus, iste sit aliquam voluptate illum iure odit exercitationem?</p>
+        <div class="contact-form">
+            <form action="">
+                <h4 for="">Informazioni Personali:</h4>
+                <div class="inputs-flex">
+                    <input type="text" name="name" placeholder="Inserisci il tuo Nome*">
+                    <input type="text" name="name" placeholder="Inserisci il tuo Cognome*">
+                </div>
+                <div class="inputs-flex">
+                    <input type="text" name="name" placeholder="Inserisci la tua Email*">
+                    <input type="text" name="name" placeholder="Inserisci il tuo Numero di Telefono">
+                </div>
+                <h4 for="">Inserisci le Date del Soggiorno:</h4>
+                <input type="text" name="datefilter" placeholder="Periodo di Soggiorno"/>
+
+                <h4 for="">Inserisci la Camera desiderata:</h4>
+                
+                <select name="" id="">
+                    <option value="" selected disabled>Seleziona la camera</option>
+                    <option value="">Appartamento</option>
+                    <option value="">Camera X</option>
+                    <option value="">Camera Y</option>
+                    <option value="">Camera Z</option>
+                </select>
+                <h4 for="">Inserisci un Messaggio:</h4>
+
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <input type="submit" class="btn btn-secondary">
+            </form>
+        </div>
+    </div>
+
+
+
+
+ </section>
+    <!-- Copyright -->
+    <section class="copyright fullwidth">
+        <div class="copyright-container container px-20">
+            <p>Copyright © 2022 Dimora 50 | <a href="">Privacy Policy</a> - <a href="">Cookie Policy</a> | Made by <a href="https://www.robertodottori.it/roberto-dottori-web-site" target="_blank"><strong>Roberto Dottori</strong></a></p>
+        </div>
+
+    </section>
     <!-- JS -->
     <script src="./js/main.js"></script>
 </body>
