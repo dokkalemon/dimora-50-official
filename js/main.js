@@ -88,14 +88,29 @@ function decreaseActiveSlide() {
 }
 
 function selectSlide() {
-  if (activeSlide === 1) {
-    slide[2].classList.add("active");
-  } else if (activeSlide === 2) {
+  const slide = document.querySelectorAll(".slide");
+  if (activeSlide === 0) {
     slide[1].classList.add("active");
-  } else if (activeSlide === 0) {
-    slide[2].classList.remove("active");
+    slide[2].classList.add("active");
+  } else if (activeSlide === 1) {
     slide[1].classList.remove("active");
+  } else if (activeSlide === 2) {
+    slide[2].classList.remove("active");
   }
+}
+
+function constolSlideHandler(num) {
+  const control = document.querySelectorAll(".control");
+
+  activeSlide = num;
+  for (let i = 0; i < control.length; i++) {
+    if (i === num) {
+      control[i].classList.add("active");
+    } else {
+      control[i].classList.remove("active");
+    }
+  }
+  selectSlide();
 }
 
 function showLabel(checkbox, ref) {

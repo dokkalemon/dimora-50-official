@@ -429,6 +429,10 @@ li:last-child {
   left: 100%;
 }
 
+.slide.fix {
+  left: 0 !important;
+}
+
 .slide .image {
   height: 100%;
   width: 100%;
