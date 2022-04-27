@@ -4,6 +4,7 @@ const burger = document.querySelector(".burger");
 const slide = document.querySelectorAll(".slide");
 const colazioni = document.getElementById("colazioni");
 const supermarket = document.getElementById("supermarket");
+const galleryShow = document.querySelector(".gallery-show");
 
 let activeNavBar = false;
 let activeSlide = 0;
@@ -67,8 +68,11 @@ function showLabel(checkbox, ref) {
     : ref.classList.remove("active");
 }
 
-/* DateRangePicker */
+function showGallery() {
+  galleryShow.innerHTML = '<section class="gallery fullwidth"></section>';
+}
 
+/* DateRangePicker */
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
