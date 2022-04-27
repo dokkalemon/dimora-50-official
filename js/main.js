@@ -77,6 +77,7 @@ function increaseActiveSlide() {
     activeSlide = 0;
   }
   selectSlide();
+  constolSlideHandler(activeSlide);
 }
 
 function decreaseActiveSlide() {
@@ -85,17 +86,19 @@ function decreaseActiveSlide() {
     activeSlide = 2;
   }
   selectSlide();
+  constolSlideHandler(activeSlide);
 }
 
 function selectSlide() {
   const slide = document.querySelectorAll(".slide");
-  if (activeSlide === 0) {
-    slide[1].classList.add("active");
-    slide[2].classList.add("active");
-  } else if (activeSlide === 1) {
-    slide[1].classList.remove("active");
-  } else if (activeSlide === 2) {
-    slide[2].classList.remove("active");
+  for (let i = 0; i < slide.length; i++) {
+    if (i === activeSlide) {
+      slide[i].classList.remove("active");
+      console.log(i);
+    } else {
+      slide[i].classList.add("active");
+      console.log(i);
+    }
   }
 }
 
