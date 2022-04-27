@@ -1,10 +1,46 @@
+/* Data */
+const apartment = [
+  {
+    path: "./img/carousel/1.jpg",
+  },
+  {
+    path: "./img/carousel/2.jpg",
+  },
+  {
+    path: "./img/carousel/3.jpg",
+  },
+  {
+    path: "./img/carousel/1.jpg",
+  },
+  {
+    path: "./img/carousel/2.jpg",
+  },
+  {
+    path: "./img/carousel/3.jpg",
+  },
+  {
+    path: "./img/carousel/1.jpg",
+  },
+  {
+    path: "./img/carousel/2.jpg",
+  },
+  {
+    path: "./img/carousel/3.jpg",
+  },
+  {
+    path: "./img/carousel/2.jpg",
+  },
+];
+
 /* References HTML */
 const navBar = document.querySelector(".navbar");
 const burger = document.querySelector(".burger");
 const slide = document.querySelectorAll(".slide");
 const colazioni = document.getElementById("colazioni");
 const supermarket = document.getElementById("supermarket");
-const galleryShow = document.querySelector(".gallery-show");
+const gallery = document.querySelector(".gallery");
+const bigPhotoContainer = document.querySelector(".big-photo-container");
+const previewScroll = document.querySelector(".preview-scroll");
 
 let activeNavBar = false;
 let activeSlide = 0;
@@ -68,8 +104,104 @@ function showLabel(checkbox, ref) {
     : ref.classList.remove("active");
 }
 
-function showGallery() {
-  galleryShow.innerHTML = '<section class="gallery fullwidth"></section>';
+function createStructure(array) {
+  gallery.classList.add("active");
+  renderSlide(array);
+}
+
+let galleryActiveSlide = 0;
+function renderSlide(array) {
+  array.forEach((el, index) => {
+    /* Slide */
+    const gallerySlide = document.createElement("div");
+    gallerySlide.classList.add("gallery-slide");
+    if (index === galleryActiveSlide) {
+      gallerySlide.classList.add("active");
+    }
+    bigPhotoContainer.append(gallerySlide);
+
+    const image = document.createElement("div");
+    image.classList.add("image");
+    gallerySlide.append(image);
+
+    const img = document.createElement("img");
+    img.setAttribute("src", `${el.path}`);
+    image.append(img);
+
+    /* Preview */
+    const slidePreview = document.createElement("div");
+    slidePreview.classList.add("slide-preview");
+    slidePreview.addEventListener("click", () => {
+      controlSlide(index);
+    });
+
+    if (index === galleryActiveSlide) {
+      slidePreview.classList.add("active");
+    }
+
+    previewScroll.append(slidePreview);
+
+    const imgPreview = document.createElement("img");
+    imgPreview.setAttribute("src", `${el.path}`);
+    slidePreview.append(imgPreview);
+  });
+}
+
+function galleryIncreaseActiveSlide() {
+  galleryActiveSlide++;
+  if (galleryActiveSlide > 9) {
+    galleryActiveSlide = 0;
+  }
+  changeSlide();
+  changePreview();
+}
+
+function galleryDecreaseActiveSlide() {
+  galleryActiveSlide--;
+  if (galleryActiveSlide < 0) {
+    galleryActiveSlide = 9;
+  }
+  changeSlide();
+  changePreview();
+}
+
+function changeSlide() {
+  const gallerySlide = document.querySelectorAll(".gallery-slide");
+
+  for (let i = 0; i < gallerySlide.length; i++) {
+    if (i === galleryActiveSlide) {
+      gallerySlide[i].classList.add("active");
+    } else {
+      gallerySlide[i].classList.remove("active");
+    }
+  }
+}
+
+function changePreview() {
+  const slidePreview = document.querySelectorAll(".slide-preview");
+
+  for (let i = 0; i < slidePreview.length; i++) {
+    if (i === galleryActiveSlide) {
+      slidePreview[i].classList.add("active");
+    } else {
+      slidePreview[i].classList.remove("active");
+    }
+  }
+}
+
+function controlSlide(index) {
+  const slidePreview = document.querySelectorAll(".slide-preview");
+
+  galleryActiveSlide = index;
+  console.log(galleryActiveSlide);
+  changePreview();
+  changeSlide();
+}
+
+function destroyStructure() {
+  gallery.classList.remove("active");
+  bigPhotoContainer.innerHTML = "";
+  previewScroll.innerHTML = "";
 }
 
 /* DateRangePicker */

@@ -772,7 +772,7 @@ li:last-child {
 
 .contact {
   background-color: var(--back-light);
-  padding-bottom: 50px;
+  padding-bottom: 120px;
 }
 
 .contact-container {
@@ -858,69 +858,6 @@ td.in-range {
 td {
   color: black;
 }
-/* PC */
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-}
-/* Tablet */
-@media screen and (max-width: 950px) {
-  body {
-    background-color: green;
-  }
-  .navbar {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    left: 100%;
-    background-color: var(--back-light);
-  }
-
-  .navbar.active {
-    left: 0;
-  }
-
-  .navbar nav ul {
-    flex-direction: column;
-    padding: 20px;
-    position: absolute;
-    height: 97vh;
-    bottom: 0;
-  }
-
-  .navbar nav ul li {
-    width: 100%;
-    padding: 0;
-    border-right: none;
-    border-bottom: 1px solid var(--line-menu);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .navbar nav ul li:last-child {
-    border-bottom: none;
-  }
-
-  .navbar nav ul li a {
-    font-size: 25px;
-  }
-
-  .burger {
-    display: flex;
-  }
-  .logo {
-    width: 100%;
-    justify-content: center;
-    z-index: 999;
-  }
-  .logo a {
-    width: 100%;
-    justify-content: center;
-    z-index: 999;
-  }
-}
 
 /* Gallery */
 .gallery {
@@ -934,6 +871,35 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+}
+
+.hidden-button {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  z-index: 99999999999;
+}
+
+.hidden-button:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.hidden-button i {
+  font-size: 30px;
+}
+
+.gallery.active {
+  display: flex;
 }
 
 .gallery-container {
@@ -965,7 +931,7 @@ td {
   left: 0;
   top: 0;
   opacity: 0;
-  border: 1px solid red;
+  transition: all 0.5s ease;
 }
 
 .gallery-slide .image {
@@ -1046,7 +1012,130 @@ td {
   justify-content: center;
   cursor: pointer;
   transition: all 0.5s ease;
+  transform: scale(1);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-arrow-container:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--back);
+}
+
+.footer {
+  padding-top: 50px;
+}
+
+.footer .logo-footer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-footer img {
+  height: 100%;
+  filter: brightness(100);
+}
+
+.footer-info {
+  padding: 20px;
+}
+
+.footer-info p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.footer-contact-item {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.footer-contact-item:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* PC */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 950px) {
+  body {
+    background-color: green;
+  }
+  .navbar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    background-color: var(--back-light);
+  }
+
+  .navbar.active {
+    left: 0;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    height: 97vh;
+    bottom: 0;
+  }
+
+  .navbar nav ul li {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--line-menu);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar nav ul li a {
+    font-size: 25px;
+  }
+
+  .burger {
+    display: flex;
+  }
+  .logo {
+    width: 100%;
+    justify-content: center;
+    z-index: 999;
+  }
+  .logo a {
+    width: 100%;
+    justify-content: center;
+    z-index: 999;
+  }
 }
 
 /* Phone */
