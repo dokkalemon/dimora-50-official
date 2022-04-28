@@ -421,12 +421,13 @@ li:last-child {
   top: 0;
   left: 0%;
   z-index: 0;
+  opacity: 0;
   transition: all 1s ease;
   overflow: hidden;
 }
 
 .slide.active {
-  left: 100%;
+  opacity: 1;
 }
 
 .slide.fix {
@@ -674,6 +675,7 @@ li:last-child {
 /* Map */
 .map-container {
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .map-container p {
@@ -691,7 +693,7 @@ li:last-child {
   position: relative;
   border-bottom: 5px solid var(--button-color);
   border-top: 5px solid var(--button-color);
-  margin-bottom: 1000px;
+  margin-bottom: 30px;
 }
 
 .map-image {
@@ -772,10 +774,80 @@ li:last-child {
   opacity: 1;
 }
 
+/* Place */
+.place {
+  background-color: var(--back-light);
+  padding-bottom: 50px;
+}
+.place-container {
+  padding-top: 50px;
+}
+
+.place-item {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 500px;
+
+  margin-bottom: 50px;
+}
+
+.place-item .place-info {
+  width: 70%;
+  height: 400px;
+  background-color: var();
+  position: absolute;
+  z-index: 999;
+  background-color: var(--back);
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-item .place-info h2 {
+  font-family: var(--font-text);
+  font-size: 40px;
+  text-align: center;
+  color: var(--button-color-hover);
+}
+.place-item .place-info p {
+  font-family: var(--font-text);
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.place-item .place-image {
+  height: 500px;
+  width: 40%;
+  position: absolute;
+}
+
+.place-item .place-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.place-item-left .place-image {
+  right: 0;
+}
+
+.place-item-right .place-image {
+  left: 0;
+}
+
+.place-item-right .place-info {
+  right: 0;
+}
+
 /* Contact */
 
 .contact {
-  background-color: var(--back-light);
+  background-color: var(--back);
   padding-bottom: 120px;
 }
 
@@ -828,7 +900,7 @@ form select,
 form textarea {
   height: 40px;
   width: 100%;
-  background-color: var(--back);
+  background-color: var(--back-light);
   border: none;
   border-left: 5px solid var(--button-color);
   padding-left: 10px;
@@ -1026,7 +1098,7 @@ td {
 
 /* Footer */
 footer {
-  background-color: var(--back);
+  background-color: var(--back-light);
 }
 
 .footer {
