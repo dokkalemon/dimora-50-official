@@ -388,6 +388,10 @@ li:last-child {
   height: 6%;
   margin: 10px 0px 10px 0px;
 }
+.quick-contact .line:nth-child(7) {
+  height: 6%;
+  margin: 10px 0px 10px 0px;
+}
 
 .quick-contact .line:last-child {
   height: 20%;
@@ -508,6 +512,11 @@ li:last-child {
 /* about Us */
 .about-us {
   padding-bottom: 80px;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-us-container p {
@@ -1178,9 +1187,6 @@ footer {
 }
 /* Tablet */
 @media screen and (max-width: 950px) {
-  body {
-    background-color: green;
-  }
   .navbar {
     position: fixed;
     height: 100vh;
@@ -1232,11 +1238,98 @@ footer {
     justify-content: center;
     z-index: 999;
   }
-}
 
-/* Phone */
-@media screen and (max-width: 710px) {
-  body {
-    background-color: blue;
+  .carousel-arrow {
+    display: none;
+  }
+
+  .text,
+  .text-container,
+  .text-content {
+    width: 100% !important;
+  }
+
+  .text-content h2 {
+    text-align: center;
+    font-size: 60px !important;
+    width: 100%;
+  }
+  .text-content p {
+    width: 90% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .text-content a {
+    margin: 0 auto;
+  }
+
+  .quick-contact {
+    height: 40px;
+    width: 100%;
+    bottom: 6vh !important;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+  }
+
+  .quick-contact .line {
+    display: none;
+  }
+
+  .quick-contact i {
+    height: 60px;
+    width: 60px;
+    font-size: 25px;
+    margin-right: 20px;
+  }
+
+  .quick-contact i:last-of-type {
+    margin-right: 0;
+  }
+
+  /* Phone */
+  @media screen and (max-width: 710px) {
+    .text-content h2 {
+      text-align: center;
+      font-size: 60px !important;
+      line-height: 60px !important;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    .about-us {
+      padding-bottom: 0px;
+    }
+    .about-us-container .title-section {
+      order: 0;
+    }
+
+    .about-us-photo {
+      display: flex;
+      flex-direction: column;
+      height: 500px;
+      height: auto;
+    }
+
+    .about-us-photo .image-item {
+      width: 100%;
+      margin-top: 5px !important;
+      height: 200px;
+      padding: 0 !important;
+    }
+
+    .about-us-photo .image-item .image {
+      width: 100%;
+      padding: 0 !important;
+    }
+
+    .about-us-container p {
+      order: 1;
+      width: 95%;
+    }
   }
 }
