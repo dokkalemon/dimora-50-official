@@ -822,7 +822,7 @@ li:last-child {
 
 .place-item .place-image {
   height: 500px;
-  width: 40%;
+  width: 50%;
   position: absolute;
 }
 
@@ -830,6 +830,7 @@ li:last-child {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  filter: contrast(0.8) brightness(0.8);
 }
 
 .place-item-left .place-image {
