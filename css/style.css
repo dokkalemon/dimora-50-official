@@ -571,6 +571,14 @@ li:last-child {
   margin-top: 100px;
   padding-bottom: 100px;
   background-color: var(--back-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.house a {
+  margin-top: 50px;
+  margin: 0 auto;
 }
 
 .house-container {
@@ -676,6 +684,17 @@ li:last-child {
 .map-container {
   padding-top: 30px;
   padding-bottom: 50px;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map button {
+  width: 300px;
+  margin-bottom: 60px;
 }
 
 .map-container p {
