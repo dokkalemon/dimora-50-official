@@ -116,7 +116,7 @@
         </div>
 
         <!-- Slides -->
-        <div class="slide fix ">
+        <div class="slide active">
             <div class="image">
                 <img src="./img/carousel/3.jpg" alt="">
                 <div class="philter"></div>
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </div>
-        <div class="slide active">
+        <div class="slide">
             <div class="image">
                 <img src="./img/carousel/1.jpg" alt="">
                 <div class="philter"></div>
@@ -146,7 +146,7 @@
                 </div>
             </div>
         </div>
-        <div class="slide active">
+        <div class="slide">
             <div class="image">
                 <img src="./img/carousel/2.jpg" alt="">
                 <div class="philter"></div>
@@ -389,12 +389,13 @@
             </div>
             <div class="place-item place-item-right">
                 <div class="place-info">
-                    <h2>Recanati</h2>
+                    <h2>Riviera del Conero</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas laboriosam sequi temporibus earum voluptatibus nesciunt, in adipisci ipsam quae, qui illo hic perspiciatis atque a saepe architecto itaque ab? Perferendis.
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas laboriosam sequi temporibus earum voluptatibus nesciunt, in adipisci ipsam quae, qui illo hic perspiciatis atque a saepe architecto itaque ab? Perferendis.
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas laboriosam sequi temporibus earum voluptatibus nesciunt, in adipisci ipsam quae, qui illo hic perspiciatis atque a saepe architecto itaque ab? Perferendis.
                     </p>
+                    <button class="btn btn-primary place-button" onclick="createStructure(apartment)"><i class="fa-solid fa-images"></i> GUARDA LE FOTO</button>
                 </div>
                 <div class="place-image">
                     <img src="https://www.interris.it/wp-content/uploads/2020/10/recanati.jpg" alt="">
@@ -426,6 +427,19 @@
                     <img src="https://media.istockphoto.com/photos/loreto-marche-province-of-ancona-panoramic-view-of-the-residence-of-picture-id1270280455?k=20&m=1270280455&s=612x612&w=0&h=LT_uZ3bJ4NcWAjfxED0OLGFbasud6WP8s046bv1GwWg=" alt="">
                 </div>
             </div>
+            <div class="place-item place-item-left">
+                <div class="place-info">
+                    <h2>Recanati</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas laboriosam sequi temporibus earum voluptatibus nesciunt, in adipisci ipsam quae, qui illo hic perspiciatis atque a saepe architecto itaque ab? Perferendis.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas laboriosam sequi temporibus earum voluptatibus nesciunt, in adipisci ipsam quae, qui illo hic perspiciatis atque a saepe architecto itaque ab? Perferendis.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas laboriosam sequi temporibus earum voluptatibus nesciunt, in adipisci ipsam quae, qui illo hic perspiciatis atque a saepe architecto itaque ab? Perferendis.
+                    </p>
+                </div>
+                <div class="place-image">
+                    <img src="https://hoteldimorae.it/images/slider-civitanova/civitanova-marche-porto-tramonto.jpeg" alt="">
+                </div>
+            </div>
 
         </div>
     </section>
@@ -442,31 +456,33 @@
         <div class="contact-container container px-20 ">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi in assumenda a. Maxime corrupti eius asperiores aut voluptas magni velit accusamus, iste sit aliquam voluptate illum iure odit exercitationem?</p>
             <div class="contact-form">
-                <form action="">
+                <form action="sendMail.php" method="post">
                     <h4 for="">Informazioni Personali:</h4>
                     <div class="inputs-flex">
-                        <input type="text" name="name" placeholder="Inserisci il tuo Nome*">
-                        <input type="text" name="name" placeholder="Inserisci il tuo Cognome*">
+                        <input type="text" name="name" placeholder="Inserisci il tuo Nome*" required>
+                        <input type="text" name="lastname" placeholder="Inserisci il tuo Cognome*" required>
                     </div>
                     <div class="inputs-flex">
-                        <input type="text" name="name" placeholder="Inserisci la tua Email*">
-                        <input type="text" name="name" placeholder="Inserisci il tuo Numero di Telefono">
+                        <input type="text" name="mail" placeholder="Inserisci la tua Email*" required>
+                        <input type="text" name="phone" placeholder="Inserisci il tuo Numero di Telefono">
                     </div>
                     <h4 for="">Inserisci le Date del Soggiorno:</h4>
-                    <input type="text" name="datefilter" placeholder="Periodo di Soggiorno"/>
-
+                    <div class="inputs-flex">
+                        <input type="date" name="arrival" placeholder="Data Arrivo">
+                        <input type="date" name="departure" placeholder="Data Partenza">
+                    </div>                    
                     <h4 for="">Inserisci la Camera desiderata:</h4>
-                    
-                    <select name="" id="">
+        
+                    <select name="camera" id="">
                         <option value="" selected disabled>Seleziona la camera</option>
-                        <option value="">Appartamento</option>
-                        <option value="">Camera X</option>
-                        <option value="">Camera Y</option>
-                        <option value="">Camera Z</option>
+                        <option value="appartamento">Appartamento</option>
+                        <option value="Camera 1">Camera 1</option>
+                        <option value="Camera 2">Camera 2</option>
+                        <option value="Camera 3">Camera 3</option>
                     </select>
                     <h4 for="">Inserisci un Messaggio:</h4>
 
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
 
                     <input type="submit" class="btn btn-secondary">
                 </form>
@@ -513,7 +529,7 @@
     <!-- Copyright -->
     <section class="copyright fullwidth">
         <div class="copyright-container container px-20">
-            <p>Copyright © 2022 Dimora 50 | <a href="">Privacy Policy</a> - <a href="">Cookie Policy</a> | Made by <a href="https://www.robertodottori.it/roberto-dottori-web-site" target="_blank"><strong>Roberto Dottori</strong></a></p>
+            <p>Copyright © 2022 Dimora 50 | <a href="https://www.iubenda.com/privacy-policy/79492493" target="_blanck">Privacy Policy</a> - <a href="./cookie-policy.html" target="_blank">Cookie Policy</a> | Made by <a href="https://www.robertodottori.it/roberto-dottori-web-site" target="_blank"><strong>Roberto Dottori</strong></a></p>
         </div>
 
     </section>
@@ -550,6 +566,14 @@
             </div>
         </section>
     </div>
+
+
+    <!-- <div class="wrapper" id="wrapperCookie">
+        <div class="null"></div>
+        <div class="cookie_banner">
+        
+        <p>Usiamo cookie per ottimizzare il nostro sito web ed i nostri servizi. <a href="https://www.hotelbianchi.it/it_IT/cookie-policy.html">Politica dei Cookie</a>. <b>Accetta</b></p>
+        </div> -->
 
     <!-- JS -->
     <script src="./js/main.js"></script>
