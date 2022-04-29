@@ -817,13 +817,11 @@ li:last-child {
   align-items: center;
   position: relative;
   height: 500px;
-
   margin-bottom: 50px;
 }
 
 .place-item .place-info {
   width: 70%;
-  height: 90%;
   position: absolute;
   z-index: 3;
   background-color: var(--back);
@@ -1331,26 +1329,33 @@ footer {
   }
 
   .place-item {
-    height: 700px;
+    display: block !important;
+    height: auto !important;
   }
 
   .place-info,
   .place-image {
+    height: 100% !important;
     width: 100% !important;
   }
 
   .place-info {
-    bottom: 0;
-    height: 60% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-self: auto !important;
+    position: relative !important;
+    top: 0;
+    height: auto !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
   }
 
   .place-item-left .place-image,
   .place-item-right .place-image {
+    height: 100% !important;
     top: 0;
-    left: 50%;
-    transform: translatex(-50%);
-    height: 60% !important;
-    width: 85% !important;
+    left: 0%;
+    width: 100% !important;
+    object-fit: cover !important;
   }
 
   .inputs-flex {
