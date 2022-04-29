@@ -134,6 +134,10 @@ label {
   font-weight: 100;
 }
 
+.cookie-container {
+  padding-top: 100px;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -807,6 +811,13 @@ li:last-child {
   background-color: var(--back-light);
   padding-bottom: 50px;
 }
+
+.place-button {
+  margin-top: 20px;
+}
+.place-button i {
+  margin-right: 10px;
+}
 .place-container {
   padding-top: 50px;
 }
@@ -1378,6 +1389,10 @@ footer {
 
   .gallery-arrow-container {
     background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .place-button {
+    width: 100%;
   }
 }
 
