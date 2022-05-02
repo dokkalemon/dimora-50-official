@@ -423,3 +423,105 @@ document.addEventListener("DOMContentLoaded", function (event) {
   );
 });
 //]]>
+
+/* Google Maps */
+
+$(document).ready(function () {
+  var pos = { lat: 43.43308, lng: 13.663843 };
+  var map = new google.maps.Map(document.getElementById("map"), {
+    center: pos,
+    zoom: 16,
+    styles: [
+      { elementType: "geometry", stylers: [{ color: "#111111" }] },
+      { elementType: "labels.text.stroke", stylers: [{ color: "#111111" }] },
+      { elementType: "labels.text.fill", stylers: [{ color: "white" }] },
+      {
+        featureType: "administrative.locality",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#ffffff" }],
+      },
+      {
+        featureType: "poi",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#ffff" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [{ color: "#ffffff" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#ffffff" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [{ color: "#454545" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#454545" }],
+      },
+      {
+        featureType: "road",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#ffffff" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry",
+        stylers: [{ color: "#454545" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#454545" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#ffffff" }],
+      },
+      {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [{ color: "#2f3948" }],
+      },
+      {
+        featureType: "transit.station",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d5a941" }],
+      },
+      {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [{ color: "#252b44" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#ffffff" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#17263c" }],
+      },
+    ],
+    disableDefaultUI: true,
+    zoomControl: true,
+    scaleControl: true,
+    mapTypeControl: false,
+  });
+
+  /*   var m = [getMarker(43.4337924, 13.6594639, "Stazione Porto Recanati")];
+   */
+  var marker = new google.maps.Marker({
+    position: { lat: 43.43308, lng: 13.663843 },
+    map: map,
+    title: "Dimora 50",
+  });
+});

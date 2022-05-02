@@ -325,8 +325,8 @@
             </p>
             
             <div class="map-image-legend">
-                <div class="map-image">
-                    <img src="./img/mappa.jpeg.jpg" alt="">
+                <div class="google-maps" id="map">
+                    
                 </div>
                 <div class="map-labels">
                     <div class="map-label" id="colazioni">
@@ -334,29 +334,6 @@
                     </div>
                     <div class="map-label" id="supermarket">
                         <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                </div>
-                <div class="map-legend">
-                    <h4>Seleziona una voce:</h4>
-                    <div class="map-item">
-                        <input type="checkbox" id="breakfast" value="dimora-50" onchange="showLabel(this, colazioni)">
-                        <label for="breakfast">Colazioni</label>
-                    </div>
-                    <div class="map-item">
-                        <input type="checkbox" id="supermercato" value="dimora-50" onchange="showLabel(this, supermarket)">
-                        <label for="supermercato">Supermercato</label>
-                    </div>
-                    <div class="map-item">
-                        <input type="checkbox" id="stazione" value="dimora-50">
-                        <label for="stazione">Stazione</label>
-                    </div>
-                    <div class="map-item">
-                        <input type="checkbox" id="parcheggio" value="dimora-50">
-                        <label for="parcheggio">Parcheggio</label>
-                    </div>
-                    <div class="map-item">
-                        <input type="checkbox" id="farmacia" value="dimora-50">
-                        <label for="farmacia">Farmacia</label>
                     </div>
                 </div>
             </div>
@@ -494,6 +471,8 @@
 
     </section>
 
+    <div  style="width: 100%; height: 400px"></div>
+
     <!-- Footer -->
     <footer>
         <div class="footer container px-20 ">
@@ -577,6 +556,9 @@
         
         <p>Usiamo cookie per ottimizzare il nostro sito web ed i nostri servizi. <a href="https://www.hotelbianchi.it/it_IT/cookie-policy.html">Politica dei Cookie</a>. <b>Accetta</b></p>
         </div> -->
+
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=palces&key=AIzaSyAU1Hn_7tfh--T1pPjiFRtFPx6hVGp75zU"></script>
 
     <!-- JS -->
     <script src="./js/main.js"></script>

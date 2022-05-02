@@ -728,10 +728,9 @@ li:last-child {
   margin-bottom: 30px;
 }
 
-.map-image {
+.google-maps {
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 .map-image img {
