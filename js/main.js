@@ -1,34 +1,67 @@
 /* Data */
 const apartment = [
   {
-    path: "./img/carousel/1.jpg",
+    path: "./img/Appartamento/2.jpg",
   },
   {
-    path: "./img/carousel/2.jpg",
+    path: "./img/Appartamento/4.jpg",
   },
   {
-    path: "./img/carousel/3.jpg",
+    path: "./img/Appartamento/6.jpg",
   },
   {
-    path: "./img/carousel/1.jpg",
+    path: "./img/Appartamento/3.jpg",
   },
   {
-    path: "./img/carousel/2.jpg",
+    path: "./img/Appartamento/7.jpg",
   },
   {
-    path: "./img/carousel/3.jpg",
+    path: "./img/Appartamento/8.jpg",
   },
   {
-    path: "./img/carousel/1.jpg",
+    path: "./img/Appartamento/9.jpg",
   },
   {
-    path: "./img/carousel/2.jpg",
+    path: "./img/Appartamento/10.jpg",
   },
   {
-    path: "./img/carousel/3.jpg",
+    path: "./img/Appartamento/11.jpg",
   },
   {
-    path: "./img/carousel/2.jpg",
+    path: "./img/Appartamento/12.jpg",
+  },
+  {
+    path: "./img/Appartamento/13.jpg",
+  },
+  {
+    path: "./img/Appartamento/14.jpg",
+  },
+];
+
+const conero = [
+  {
+    path: "https://www.traghettatoridelconero.it/images/gallery/due-sorelle_001.jpg",
+  },
+  {
+    path: "https://www.lacasadileo.it/wp-content/uploads/2021/01/slider-temp.jpeg",
+  },
+  {
+    path: "https://conerofunboat.it/wp-content/uploads/2021/04/Sirolo-panorama-del-Centro-Storico-%C2%A9-Sauro-Strappato-1920x1080_c.jpeg",
+  },
+  {
+    path: "https://www.numanablu.it/images/bg-numana-blu.jpg",
+  },
+  {
+    path: "https://i1.wp.com/www.linkiesta.it/wp-content/uploads/2020/08/2_le-due-sorelle-conero-an-2.jpg?fit=1155%2C765&ssl=1",
+  },
+  {
+    path: "https://www.osimoturismo.it/images/osimo/sirolo/sirolo-10.jpg",
+  },
+  {
+    path: "https://news.koobcamp.com/wp-content/uploads/Osimo-3.jpg",
+  },
+  {
+    path: "https://pbs.twimg.com/media/EAJWMFMXUAY5fwf.jpg",
   },
 ];
 

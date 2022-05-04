@@ -1063,14 +1063,13 @@ td {
 }
 
 .preview-scroll {
-  width: 300% !important;
   height: 100%;
   display: flex;
 }
 
 .photo-preview .slide-preview {
   height: 100%;
-  width: 200px;
+  min-width: 200px;
 }
 
 .photo-preview .slide-preview img {
