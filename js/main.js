@@ -65,6 +65,54 @@ const conero = [
   },
 ];
 
+const cameraFirst = [
+  {
+    path: "./img/Camera-1/1.jpg",
+  },
+  {
+    path: "./img/Camera-1/7.jpg",
+  },
+  {
+    path: "./img/Camera-1/5.jpg",
+  },
+  {
+    path: "./img/Camera-1/6.jpg",
+  },
+  {
+    path: "./img/Camera-1/2.jpg",
+  },
+  {
+    path: "./img/Camera-1/3.jpg",
+  },
+];
+
+const cameraSecond = [
+  {
+    path: "./img/Camera-2/1.jpg",
+  },
+  {
+    path: "./img/Camera-2/2.jpg",
+  },
+  {
+    path: "./img/Camera-2/3.jpg",
+  },
+  {
+    path: "./img/Camera-2/4.jpg",
+  },
+];
+
+const cameraThird = [
+  {
+    path: "./img/Camera-3/1.jpg",
+  },
+  {
+    path: "./img/Camera-3/2.jpg",
+  },
+  {
+    path: "./img/Camera-3/3.jpg",
+  },
+];
+
 /* References HTML */
 const navBar = document.querySelector(".navbar");
 const burger = document.querySelector(".burger");
@@ -199,18 +247,20 @@ function renderSlide(array) {
 }
 
 function galleryIncreaseActiveSlide() {
+  const gallerySlide = document.querySelectorAll(".gallery-slide");
   galleryActiveSlide++;
-  if (galleryActiveSlide > 9) {
+  if (galleryActiveSlide > gallerySlide.length - 1) {
     galleryActiveSlide = 0;
   }
   changeSlide();
   changePreview();
 }
 
-function galleryDecreaseActiveSlide() {
+function galleryDecreaseActiveSlide(array) {
+  const gallerySlide = document.querySelectorAll(".gallery-slide");
   galleryActiveSlide--;
   if (galleryActiveSlide < 0) {
-    galleryActiveSlide = 9;
+    galleryActiveSlide = gallerySlide.length - 1;
   }
   changeSlide();
   changePreview();
