@@ -1,40 +1,40 @@
 /* Data */
 const apartment = [
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/2.JPG",
+    path: "../img/Appartamento/2.JPG",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/4.jpg",
+    path: "../img/Appartamento/4.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/6.jpg",
+    path: "../img/Appartamento/6.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/3.JPG",
+    path: "../img/Appartamento/3.JPG",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/7.jpg",
+    path: "../img/Appartamento/7.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/8.jpg",
+    path: "../img/Appartamento/8.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/9.jpg",
+    path: "../img/Appartamento/9.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/10.jpg",
+    path: "../img/Appartamento/10.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/11.jpg",
+    path: "../img/Appartamento/11.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/12.jpg",
+    path: "../img/Appartamento/12.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/13.jpg",
+    path: "../img/Appartamento/13.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/Appartamento/14.jpg",
+    path: "../img/Appartamento/14.jpg",
   },
 ];
 
@@ -67,49 +67,49 @@ const conero = [
 
 const cameraFirst = [
   {
-    path: "./img/Camera-1/1.jpg",
+    path: "../img/Camera-1/1.jpg",
   },
   {
-    path: "./img/Camera-1/7.jpg",
+    path: "../img/Camera-1/7.jpg",
   },
   {
-    path: "./img/Camera-1/5.jpg",
+    path: "../img/Camera-1/5.jpg",
   },
   {
-    path: "./img/Camera-1/6.jpg",
+    path: "../img/Camera-1/6.jpg",
   },
   {
-    path: "./img/Camera-1/2.jpg",
+    path: "../img/Camera-1/2.jpg",
   },
   {
-    path: "./img/Camera-1/3.jpg",
+    path: "../img/Camera-1/3.jpg",
   },
 ];
 
 const cameraSecond = [
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-2/1.jpg",
+    path: "../img/Camera-2/1.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-2/2.jpg",
+    path: "../img/Camera-2/2.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-2/3.jpg",
+    path: "../img/Camera-2/3.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-2/4.jpg",
+    path: "../img/Camera-2/4.jpg",
   },
 ];
 
 const cameraThird = [
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-3/1.jpg",
+    path: "../img/Camera-3/1.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-3/2.jpg",
+    path: "../img/Camera-3/2.jpg",
   },
   {
-    path: "https://www.robertodottori.it/dimora-50/camera-3/3.jpg",
+    path: "../img/Camera-3/3.jpg",
   },
 ];
 
