@@ -59,6 +59,6 @@ $emailForOther = "
 mail($to, "Email da www.dimora50.it: {$subject}", $emailForMe, implode("\r\n", $headers));
 mail($mail, "Dimora50: Grazie per averci contattato!", $emailForOther, implode("\r\n", $headers));
 
-header("location: index.html")
+header("location: https://www.dimora50.it/")
 
 ?>

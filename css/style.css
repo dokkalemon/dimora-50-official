@@ -1208,6 +1208,31 @@ footer {
 .footer-contact-item:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.snackbar {
+  width: 100%;
+  padding: 20px;
+  display: none;
+  margin-bottom: 20px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  font-family: var(--font-title);
+  font-weight: 800;
+}
+
+.snackbar.success {
+  display: block;
+  background-color: rgb(0, 255, 187);
+  border: 3px solid rgb(1, 171, 125);
+  color: rgb(1, 113, 83);
+}
+.snackbar.error {
+  display: block;
+  background-color: rgb(255, 143, 143);
+  border: 3px solid rgb(171, 1, 1);
+  color: rgb(113, 1, 1);
+}
+
 /* PC */
 @media screen and (max-width: 1200px) {
   .container {

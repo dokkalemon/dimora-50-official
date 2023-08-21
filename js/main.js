@@ -1,40 +1,40 @@
 /* Data */
 const apartment = [
   {
-    path: "./img/Appartamento/2.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/2.JPG",
   },
   {
-    path: "./img/Appartamento/4.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/4.jpg",
   },
   {
-    path: "./img/Appartamento/6.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/6.jpg",
   },
   {
-    path: "./img/Appartamento/3.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/3.JPG",
   },
   {
-    path: "./img/Appartamento/7.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/7.jpg",
   },
   {
-    path: "./img/Appartamento/8.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/8.jpg",
   },
   {
-    path: "./img/Appartamento/9.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/9.jpg",
   },
   {
-    path: "./img/Appartamento/10.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/10.jpg",
   },
   {
-    path: "./img/Appartamento/11.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/11.jpg",
   },
   {
-    path: "./img/Appartamento/12.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/12.jpg",
   },
   {
-    path: "./img/Appartamento/13.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/13.jpg",
   },
   {
-    path: "./img/Appartamento/14.jpg",
+    path: "https://www.robertodottori.it/dimora-50/Appartamento/14.jpg",
   },
 ];
 
@@ -88,28 +88,28 @@ const cameraFirst = [
 
 const cameraSecond = [
   {
-    path: "./img/Camera-2/1.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-2/1.jpg",
   },
   {
-    path: "./img/Camera-2/2.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-2/2.jpg",
   },
   {
-    path: "./img/Camera-2/3.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-2/3.jpg",
   },
   {
-    path: "./img/Camera-2/4.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-2/4.jpg",
   },
 ];
 
 const cameraThird = [
   {
-    path: "./img/Camera-3/1.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-3/1.jpg",
   },
   {
-    path: "./img/Camera-3/2.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-3/2.jpg",
   },
   {
-    path: "./img/Camera-3/3.jpg",
+    path: "https://www.robertodottori.it/dimora-50/camera-3/3.jpg",
   },
 ];
 
@@ -122,6 +122,68 @@ const supermarket = document.getElementById("supermarket");
 const gallery = document.querySelector(".gallery");
 const bigPhotoContainer = document.querySelector(".big-photo-container");
 const previewScroll = document.querySelector(".preview-scroll");
+const snackbar = document.querySelector(".snackbar")
+const contactForm = document.querySelector('#contact-form');
+
+const service_id = 'service_v1yo9b4'
+const template_id = 'template_udqsraz'
+const public_key = '21KRroY1P4NAyic6q'
+
+
+emailjs.init('21KRroY1P4NAyic6q');
+
+
+const controlEmail = (email) => {
+  const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  return pattern.test(email)
+}
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = contactForm.querySelector('input[name="name"]').value
+  const lastName = contactForm.querySelector('input[name="lastname"]').value
+  const mail = contactForm.querySelector('input[name="mail"]').value
+  const phone = contactForm.querySelector('input[name="phone"]').value
+  const arrival = contactForm.querySelector('input[name="arrival"]').value
+  const departure = contactForm.querySelector('input[name="departure"]').value
+  const camera = contactForm.querySelector('select[name="camera"]').value
+  const message = contactForm.querySelector('textarea[name="message"]').value
+
+  if (name.length === 0 || lastName.length === 0 || mail.length === 0) {
+    snackbar.classList.add('error')
+    snackbar.innerHTML = "Devi inserire tutti i campi obbligatori!"
+    return;
+  }
+  if (!controlEmail(mail)) {
+    snackbar.classList.add('error')
+    snackbar.innerHTML = "Inserisci un email valida!"
+    return;
+  }
+
+
+
+  const templateParams = {
+    from_name: mail,
+    name_surname: `${name} ${lastName}`,
+    camera,
+    arrival,
+    departure,
+    phone,
+    message
+  }
+
+
+  emailjs.send(service_id, template_id, templateParams).then((response) => {
+    snackbar.classList.add('success')
+    snackbar.innerHTML = "Email inviata con successo!"
+  }, (error) => {
+    snackbar.classList.add('error')
+    snackbar.innerHTML = "Ops! Qualcosa è andato storto, riprova!"
+  })
+})
+
 
 let activeNavBar = false;
 let activeSlide = 0;
@@ -344,8 +406,8 @@ $(function () {
     function (ev, picker) {
       $(this).val(
         picker.startDate.format("DD/MM/YYYY") +
-          " - " +
-          picker.endDate.format("DD/MM/YYYY")
+        " - " +
+        picker.endDate.format("DD/MM/YYYY")
       );
     }
   );

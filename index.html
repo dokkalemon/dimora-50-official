@@ -138,7 +138,7 @@
                 <div class="text-container container px-20">
                     <div class="text-content">
                         <h2>L'eleganza nell'Essere</h2>
-                        <p>Dimora 50 vi offre un'appartamento e tre camere dal design moderno ma elegante. Recentemente ristrutturata, vi aspetta offrirvi spazi ampi e confortevoli.</p>
+                        <p>Dimora 50 vi offre un'appartamento e tre camere dal design moderno ma elegante. Recentemente ristrutturata, vi aspetta per offrirvi spazi ampi e confortevoli.</p>
                         <a href="#chi-siamo"><button class="btn btn-secondary">SCOPRI DI PIÙ</button></a>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                 <div class="text-container container px-20">
                     <div class="text-content">
                         <h2>Al centro di tutto</h2>
-                        <p>Dimora 50 è situata al centro di Porto Recanati, metà turistica gettonatissima da chi vuole rilassarsi ma anche da chi vuole divertirsi.</p>                       
+                        <p>Dimora 50 è situata al centro di Porto Recanati, meta turistica gettonatissima da chi vuole rilassarsi ma anche da chi vuole divertirsi.</p>                       
                         <a href="#chi-siamo"><button class="btn btn-secondary">SCOPRI DI PIÙ</button></a>
                     </div>
                 </div>
@@ -251,7 +251,7 @@
             </div>
             <div class="house-item photo-right">
                 <div class="house-photo">
-                    <img src="./img/Camera-1/1.jpg" alt="">
+                    <img src="./img/camera-1/1.jpg" alt="">
                 </div>
                 <div class="house-info">
                     <div class="house-info-text">
@@ -290,12 +290,12 @@
                     </div>
                 </div>
                 <div class="house-photo">
-                    <img src="./img/Camera-3/1.jpg" alt="">
+                    <img src="./img/camera-3/1.jpg" alt="">
                 </div>
             </div>
             <div class="house-item photo-right">
                 <div class="house-photo">
-                    <img src="./img/Camera-2/1.jpg" alt="">
+                    <img src="./img/camera-2/1.jpg" alt="">
                 </div>
                 <div class="house-info">
                     <div class="house-info-text">
@@ -321,7 +321,7 @@
 
 
     <!-- Dove si trova -->
-    <section class="map fullwidth" id="dove-si-trova">
+    <section class="map full-width" id="dove-si-trova">
         <div class="title-section">
             <div class="dot"></div>
             <h2>Dove si trova</h2>
@@ -332,7 +332,7 @@
         <div class="map-container container px-20">
             <p>
                 Dimoreta 50 si trova al centro di Porto Recanati, località turistica situata nella costa marchigiana.<br>
-                Nasce come un paesino di pescatori poi con il tempo è diventata una metà turistica gettonatissima per chi vuole rilassarsi e godersi il mare.
+                Nasce come un paesino di pescatori poi con il tempo è diventata una meta turistica gettonatissima per chi vuole rilassarsi e godersi il mare.
                 Per chi ama la tranquillità e vuole godersi il mare al 100%, Porto Recanati offre il lungomare Lepanto, completamente pedonale e consigliato anche per quelle famiglie con bambini, per chi invece
                 ama lo shopping e la frenesia, il paese offre un corso lunghissimo dove tanti sono i negozi e bar per fare shopping e aperitivi.
 
@@ -357,7 +357,7 @@
 
 
     <!-- Place -->
-    <section class="place fullwidth " id="scopriLeMarche">
+    <section class="place full-width " id="scopriLeMarche">
         <div class="title-section">
             <div class="dot"></div>
             <h2>Scopri le Marche</h2>
@@ -443,10 +443,13 @@
         <div class="contact-container container px-20 ">
             <p>Vi aspettiamo per un soggiorno da noi!</p>
             <div class="contact-form">
-                <form action="sendMail.php" method="post">
+                <div class="snackbar">
+                    
+                </div>
+                <form id="contact-form" method="post">
                     <h4 for="">Informazioni Personali:</h4>
-                    <div class="inputs-flex">
-                        <input type="text" name="name" placeholder="Inserisci il tuo Nome*" required>
+                    <div class="inputs-flex" >
+                        <input type="text"  name="name" placeholder="Inserisci il tuo Nome*" required>
                         <input type="text" name="lastname" placeholder="Inserisci il tuo Cognome*" required>
                     </div>
                     <div class="inputs-flex">
@@ -520,7 +523,7 @@
 
 
     <!-- Copyright -->
-    <section class="copyright fullwidth">
+    <section class="copyright full-width">
         <div class="copyright-container container px-20">
             <p>Copyright © 2022 Dimora 50 | <a href="https://www.iubenda.com/privacy-policy/79492493" target="_blanck">Privacy Policy</a> - <a href="./cookie-policy.html" target="_blank">Cookie Policy</a> | Made by <a href="https://www.robertodottori.it/roberto-dottori-web-site" target="_blank"><strong>Roberto Dottori</strong></a></p>
         </div>
@@ -529,7 +532,7 @@
 
     <!-- Gallery -->
     <div class="gallery-show">
-        <section class="gallery fullwidth">
+        <section class="gallery full-width">
             <div class="hidden-button" onclick="destroyStructure()">
                 <i class="fa-solid fa-xmark"></i>
             </div>
@@ -571,6 +574,8 @@
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?libraries=palces&key=AIzaSyAU1Hn_7tfh--T1pPjiFRtFPx6hVGp75zU"></script>
 
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- JS -->
     <script src="./js/main.js"></script>
 </body>
